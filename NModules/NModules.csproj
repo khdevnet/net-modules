@@ -11,9 +11,9 @@
 		<RepositoryUrl>https://github.com/khdevnet/nmodules</RepositoryUrl>
 		<RepositoryType>github</RepositoryType>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<AssemblyVersion>1.1.0.0</AssemblyVersion>
-		<FileVersion>1.1.0.0</FileVersion>
-		<Version>1.1.0</Version>
+		<AssemblyVersion>1.2.0.0</AssemblyVersion>
+		<FileVersion>1.2.0.0</FileVersion>
+		<Version>1.2.0</Version>
 	</PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoFixture" Version="4.17.0" />

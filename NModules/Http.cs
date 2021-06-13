@@ -55,6 +55,11 @@ namespace NModules
             return this;
         }
 
+        public HttpResponseMessage Send()
+        {
+            return SendAsync().GetAwaiter().GetResult();
+        }
+
         public async Task<HttpResponseMessage> SendAsync()
         {
             var rm = new HttpRequestMessage(HttpMethod, Url);
@@ -92,6 +97,11 @@ namespace NModules
 
     public static class Exts
     {
+        public static TData ToData<TData>(this HttpResponseMessage message)
+        {
+            return message.ToDataAsync<TData>().GetAwaiter().GetResult();
+        }
+
         public static Task<TData> ToDataAsync<TData>(this HttpResponseMessage message)
         {
             return message.Content.ReadFromJsonAsync<TData>();
