@@ -143,7 +143,7 @@ namespace NModules
             if (data != null)
             {
 
-                return (data.StartsWith("{") ? data : $"{{\"content\":\"{data}\"}}").ToJsonPrettify();
+                return (data.StartsWith("{") || data.StartsWith("[") ? data : $"{{\"content\":\"{data}\"}}").ToJsonPrettify();
             }
             else
             {
